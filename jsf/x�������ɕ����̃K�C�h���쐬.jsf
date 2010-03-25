@@ -1,0 +1,28 @@
+﻿/*
+ *
+ * 一度にx軸方向に複数のガイドを引いてくれるJSF
+ *
+ * Copyright (C) 2009 あつのすけ（flabaka）
+ * version 1.0.0
+ * CreateDate 2009/07/27
+ *
+ * Developed by あつのすけ（flabaka）
+ * http://flabaka.com/blog/
+ *
+ * (C) 2009 flabaka and is released under the MIT License:
+ * http://www.opensource.org/licenses/mit-license.php
+ *
+ */
+//ダイアログボックスを表示させる
+
+var data = prompt("x軸に複数のガイドを引く","値をカンマで区切ってください");
+
+//カンマを取り除き、配列に入れる
+
+var myarray = data.split(",");
+
+//配列から複数のガイドを作成
+
+for(var i=0;i<myarray.length;i++){
+	fw.getDocumentDOM().addGuide(myarray[i], "vertical");
+}
